@@ -18,11 +18,7 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "UnityAds",
-            dependencies: []),
-        .testTarget(
-            name: "UnityAdsTests",
-            dependencies: ["UnityAds"]),
+        
+        .binaryTarget(name: "UnityAds", url: "https://github.com/Unity-Technologies/unity-ads-ios/releases/download/3.7.5/UnityAdsXCF.zip", checksum: "b8149ba84eb82d462f752472e818938b9f02290af8ab566c2dd5ad879c3ed910")
     ]
 )
